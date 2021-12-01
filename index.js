@@ -1,12 +1,9 @@
 require('dotenv').config();
-import { ApolloServer } from 'apollo-server-express';
-import express from 'express'
+import { ApolloServer } from 'apollo-server';
 // import {connect} from 'mongoose';
 import resolvers from './gql/resolver';
 import typeDefs from './gql/schema';
 import jwt from 'jsonwebtoken'
-import {graphqlUploadExpress} from 'graphql-upload'
-
 require('colors');
 
 import conectarDB from './db/config';
@@ -32,14 +29,10 @@ import conectarDB from './db/config';
                 }
             },
         });
-    await server.start();
 
-    const app = express();
-    app.use(graphqlUploadExpress())
-    server.applyMiddleware({app});
+    server.listen({port: process.env.PORT || 4000}).then(({url}) => {
+        console.log(`Servidor trabajando en: ${url}`.cyan);
+    });
 
-    await new Promise((r) => app.listen({port: process.env.PORT || 4000}, r)) 
-
-    console.log(`Server running in: http://localhost:4000${server.graphqlPath}`);
 }()
 
