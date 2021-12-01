@@ -2,6 +2,8 @@ import {gql} from 'apollo-server'
 
 const typeDefs = gql`
 
+    scalar Upload
+
     type User {
         id: ID
         nombre: String
