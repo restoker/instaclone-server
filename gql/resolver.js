@@ -8,14 +8,13 @@ import Follow from '../models/Follow'
 import Publicacion from "../models/Publicacion";
 import Comentario from "../models/Comentario";
 import Like from "../models/Like";
-import { GraphQLUpload } from "graphql-upload";
 
 const  crearToken= (usuario, secreta, expiresIn) => {
     const {id, email, nombre, username} = usuario;
     return jwt.sign({id, email, nombre, username}, secreta, {expiresIn});    
 }
 const resolvers = {
-    Upload: GraphQLUpload,
+    // Upload: GraphQLUpload,
     Query: {
         // User
         getUser: async (_, {id, username}, ctx) => {
