@@ -1,0 +1,40 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "dev": "nodemon --exec babel-node ."
+  },
+  "keywords": [],
+  "author": "Milthon ttito cusi",
+  "license": "ISC",
+  "dependencies": {
+    "@graphql-tools/schema": "^8.0.3",
+    "apollo-server": "^2.25.2",
+    "apollo-server-express": "^3.1.2",
+    "aws-sdk": "^2.961.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "fs-capacitor": "^7.0.1",
+    "graphql": "^15.5.0",
+    "graphql-subscriptions": "^1.2.1",
+    "graphql-upload": "^12.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0",
+    "subscriptions-transport-ws": "^0.9.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.7",
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.7"
+  },
+  "resolutions": {
+    "fs-capacitor": "^6.2.0",
+    "graphql-upload": "^11.0.0"
+  },
+  "description": ""
+}
