@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec npx babel-node ./index.js",
+    "start": "nodemon --exec babel-node .",
     "preinstall": "npx npm-force-resolutions",
+    "heroku-prebuild": "npm install --only=dev",
     "dev": "nodemon --exec babel-node ."
   },
   "keywords": [],
