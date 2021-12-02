@@ -2,11 +2,13 @@ require('dotenv').config();
 import { ApolloServer } from 'apollo-server';
 // import {connect} from 'mongoose';
 import resolvers from './gql/resolver';
-import typeDefs from './gql/schema';
+import typeDefs from './gql/schema.js';
 import jwt from 'jsonwebtoken'
 require('colors');
 
 import conectarDB from './db/config';
+
+const PORT = process.env.PORT || 4000;
 
 !async function() {
     await conectarDB();
@@ -30,7 +32,7 @@ import conectarDB from './db/config';
             },
         });
 
-    server.listen({port: process.env.PORT || 4000}).then(({url}) => {
+    server.listen({port: PORT}).then(({url}) => {
         console.log(`Servidor trabajando en: ${url}`.cyan);
     });
 

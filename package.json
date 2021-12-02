@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "babel-node .",
+    "start": "nodemon --exec npx babel-node ./index.js",
     "preinstall": "npx npm-force-resolutions",
     "dev": "nodemon --exec babel-node ."
   },
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
-    "@babel/node": "^7.14.7",
+    "@babel/node": "^7.16.0",
     "@babel/preset-env": "^7.14.7",
     "colors": "^1.4.0",
     "nodemon": "^2.0.7"
