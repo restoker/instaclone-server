@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "babel-node .",
+    "preinstall": "npx npm-force-resolutions",
     "dev": "nodemon --exec babel-node ."
   },
   "keywords": [],
